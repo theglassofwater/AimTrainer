@@ -18,12 +18,12 @@ sound = pygame.mixer.Sound("gun.wav")
 width = 1280
 height = 720
 window = pygame.display.set_mode((width,height))
-#pygame.mixer.music.load("Cold.mp3")
+pygame.mixer.music.load("Cold.mp3")
 pygame.display.set_caption('game')
 frame_time = 20
-#pygame.mixer.music.play(-1)
+pygame.mixer.music.play(-1)
 volume = 1
-#pygame.mixer.music.set_volume(volume)
+pygame.mixer.music.set_volume(volume)
 
 white = (255,255,255)
 black = (0,0,0)
