@@ -4,8 +4,8 @@ import pygame, sys, random, time, math, random, os
 current_directory = os.getcwd()
 script_directory = os.path.dirname(os.path.abspath(__file__))
 
-if current_directory != script_directory:
-    os.chdir('AimTrainer')
+# if current_directory != script_directory:
+#     os.chdir('AimTrainer')
 
 pygame.init()
 
@@ -330,7 +330,7 @@ def count_down(game):
 
 def bouncing():
     ball_list = []
-    num_of_balls = 0
+    num_of_balls = 50
     for x in range(num_of_balls):
         ball_list.append(bouncing_ball(50,random.randint(5,10),random.randint(5,10),(random.randint(0,255),random.randint(0,255),random.randint(0,255)),1000,window,width,height))
     ball = bouncing_ball(50,10,5,yellow,1000,window,width,height)
