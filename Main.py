@@ -3,22 +3,21 @@ import pygame, sys, random, time, math, random, os
 
 current_directory = os.getcwd()
 script_directory = os.path.dirname(os.path.abspath(__file__))
-
-# if current_directory != script_directory:
-#     os.chdir('AimTrainer')
+if current_directory != script_directory:
+    os.chdir(script_directory)
 
 pygame.init()
 
-settings_image = pygame.image.load('settings_new.jpg')
-background_image = pygame.image.load("stars.jpg")
-headset_image = pygame.image.load('headset.jpg')
-headset_image_no = pygame.image.load('headset_no.jpg')
-sound = pygame.mixer.Sound("gun.wav")
+settings_image = pygame.image.load('assets/settings_new.jpg')
+background_image = pygame.image.load("assets/stars.jpg")
+headset_image = pygame.image.load('assets/headset.jpg')
+headset_image_no = pygame.image.load('assets/headset_no.jpg')
+sound = pygame.mixer.Sound("assets/gun.wav")
 
 width = 1280
 height = 720
 window = pygame.display.set_mode((width,height))
-pygame.mixer.music.load("Cold.mp3")
+pygame.mixer.music.load("assets/Cold.mp3")
 pygame.display.set_caption('game')
 frame_time = 20
 pygame.mixer.music.play(-1)
@@ -44,14 +43,14 @@ def change_res(res):   #res hsould only be limited res' as backround doesnt scal
     pygame.quit
     pygame.init()
 
-    settings_image = pygame.image.load('settings_new.jpg')
+    settings_image = pygame.image.load('assets/settings_new.jpg')
     if res[1] ==1080:
-        background_image = pygame.image.load('stars1080.jpg')
+        background_image = pygame.image.load('assets/stars1080.jpg')
     else:
-        background_image = pygame.image.load("stars.jpg")
-    headset_image = pygame.image.load('headset.jpg')
-    headset_image_no = pygame.image.load('headset_no.jpg')
-    sound = pygame.mixer.Sound("gun.wav")
+        background_image = pygame.image.load("assets/stars.jpg")
+    headset_image = pygame.image.load('assets/headset.jpg')
+    headset_image_no = pygame.image.load('assets/headset_no.jpg')
+    sound = pygame.mixer.Sound("assets/gun.wav")
 
     width = res[0]
     height = res[1]
@@ -59,7 +58,7 @@ def change_res(res):   #res hsould only be limited res' as backround doesnt scal
         window = pygame.display.set_mode((width,height))#,pygame.FULLSCREEN)
     else:
         window = pygame.display.set_mode((width,height),pygame.FULLSCREEN)
-    pygame.mixer.music.load("Cold.mp3")
+    pygame.mixer.music.load("assets/Cold.mp3")
     pygame.display.set_caption('game')
 
     pygame.mixer.music.play(-1)
